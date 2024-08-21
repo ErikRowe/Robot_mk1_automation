@@ -1,0 +1,318 @@
+<?xml version="1.0" ?>
+<robot name="BiPedal" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find BiPedal_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find BiPedal_description)/urdf/BiPedal.trans" />
+<xacro:include filename="$(find BiPedal_description)/urdf/BiPedal.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.08586663481755225 0.015200000219473764 0.030346999101520028" rpy="0 0 0"/>
+    <mass value="0.008056994181695316"/>
+    <inertia ixx="1e-06" iyy="2e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_limb_1_2">
+  <inertial>
+    <origin xyz="-0.023970362856175466 -0.00024134710084450575 -0.009362098179452969" rpy="0 0 0"/>
+    <mass value="0.01661221123033472"/>
+    <inertia ixx="1e-06" iyy="6e-06" izz="6e-06" ixy="-0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0695 -0.0152 -0.03505" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0695 -0.0152 -0.03505" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_limb_2_1">
+  <inertial>
+    <origin xyz="0.0006303835963102564 -0.011065776371625417 -0.020068183255934048" rpy="0 0 0"/>
+    <mass value="0.01296642071844992"/>
+    <inertia ixx="4e-06" iyy="4e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0125 -0.02285 -0.02715" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0125 -0.02285 -0.02715" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_limb_3_1">
+  <inertial>
+    <origin xyz="0.009804991960905243 -7.840550231633103e-09 -0.0462455041341746" rpy="0 0 0"/>
+    <mass value="0.013303650970471134"/>
+    <inertia ixx="1.1e-05" iyy="1e-05" izz="1e-06" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.00245 -0.01225 0.013" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.00245 -0.01225 0.013" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_limb_4_1">
+  <inertial>
+    <origin xyz="0.009945091460854778 7.071281254988904e-09 -0.03753649448055185" rpy="0 0 0"/>
+    <mass value="0.01200848860811485"/>
+    <inertia ixx="7e-06" iyy="6e-06" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.00245 -0.01225 0.088" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.00245 -0.01225 0.088" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_limb_5_1">
+  <inertial>
+    <origin xyz="0.008690097127208904 0.0014296750228966221 -0.011008207091126126" rpy="0 0 0"/>
+    <mass value="0.006343438229127173"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.00245 -0.01225 0.148" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.00245 -0.01225 0.148" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_limb_1_2">
+  <inertial>
+    <origin xyz="0.023970639297027932 -0.00024134710084450575 -0.009362098179452969" rpy="0 0 0"/>
+    <mass value="0.01661221123033472"/>
+    <inertia ixx="1e-06" iyy="6e-06" izz="6e-06" ixy="0.0" iyz="0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.102233 -0.0152 -0.03505" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.102233 -0.0152 -0.03505" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_limb_2_1">
+  <inertial>
+    <origin xyz="-0.0006301139612049922 -0.01106577637162541 -0.020068183255934065" rpy="0 0 0"/>
+    <mass value="0.01296642071844992"/>
+    <inertia ixx="4e-06" iyy="4e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.159233 -0.02285 -0.02715" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.159233 -0.02285 -0.02715" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_limb_3_1">
+  <inertial>
+    <origin xyz="-0.00980471777042366 6.339790215373342e-09 -0.046245591376428495" rpy="0 0 0"/>
+    <mass value="0.013303625772639282"/>
+    <inertia ixx="1.1e-05" iyy="1e-05" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.169283 -0.01225 0.013" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.169283 -0.01225 0.013" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_limb_4_1">
+  <inertial>
+    <origin xyz="-0.009944821825750433 -6.698752063466484e-09 -0.03753649448055171" rpy="0 0 0"/>
+    <mass value="0.012008488608114851"/>
+    <inertia ixx="7e-06" iyy="6e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.169283 -0.01225 0.088" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.169283 -0.01225 0.088" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_limb_5_1">
+  <inertial>
+    <origin xyz="-0.008689827492104452 0.0014296750228965892 -0.011008207091125932" rpy="0 0 0"/>
+    <mass value="0.006343438229127177"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.169283 -0.01225 0.148" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.169283 -0.01225 0.148" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="l_limb_1_to_base_link" type="revolute">
+  <origin xyz="0.0695 0.0152 0.03505" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="l_limb_1_2"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="l_limb_2_to_limb_1" type="revolute">
+  <origin xyz="-0.057 0.00765 -0.0079" rpy="0 0 0"/>
+  <parent link="l_limb_1_2"/>
+  <child link="l_limb_2_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="1.570796" lower="-0.261799" effort="100" velocity="100"/>
+</joint>
+
+<joint name="l_limb_3_to_limb_2" type="revolute">
+  <origin xyz="-0.01005 -0.0106 -0.04015" rpy="0 0 0"/>
+  <parent link="l_limb_2_1"/>
+  <child link="l_limb_3_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="l_limb_4_to_limb_3" type="revolute">
+  <origin xyz="0.0 0.0 -0.075" rpy="0 0 0"/>
+  <parent link="l_limb_3_1"/>
+  <child link="l_limb_4_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="l_limb_5_to_limb_4" type="revolute">
+  <origin xyz="0.0 0.0 -0.06" rpy="0 0 0"/>
+  <parent link="l_limb_4_1"/>
+  <child link="l_limb_5_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="r_limb_1_to_base_link" type="revolute">
+  <origin xyz="0.102233 0.0152 0.03505" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="r_limb_1_2"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="r_limb_2_to_limb_1" type="revolute">
+  <origin xyz="0.057 0.00765 -0.0079" rpy="0 0 0"/>
+  <parent link="r_limb_1_2"/>
+  <child link="r_limb_2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="0.261799" lower="-1.396263" effort="100" velocity="100"/>
+</joint>
+
+<joint name="r_limb_3_to_limb_2" type="revolute">
+  <origin xyz="0.01005 -0.0106 -0.04015" rpy="0 0 0"/>
+  <parent link="r_limb_2_1"/>
+  <child link="r_limb_3_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="r_limb_4_to_limb_3" type="revolute">
+  <origin xyz="0.0 0.0 -0.075" rpy="0 0 0"/>
+  <parent link="r_limb_3_1"/>
+  <child link="r_limb_4_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="r_limb_5_to_limb_4" type="revolute">
+  <origin xyz="0.0 0.0 -0.06" rpy="0 0 0"/>
+  <parent link="r_limb_4_1"/>
+  <child link="r_limb_5_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+</robot>
