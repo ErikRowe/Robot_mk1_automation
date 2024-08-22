@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<robot name="BiPedal" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="bipedal" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find BiPedal_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find BiPedal_description)/urdf/BiPedal.trans" />
-<xacro:include filename="$(find BiPedal_description)/urdf/BiPedal.gazebo" />
+<xacro:include filename="$(find bipedal_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find bipedal_description)/urdf/bipedal.trans" />
+<xacro:include filename="$(find bipedal_description)/urdf/bipedal.gazebo" />
 <link name="base_link">
   <inertial>
     <origin xyz="0.08586663481755225 0.015200000219473764 0.030346999101520028" rpy="0 0 0"/>
@@ -13,14 +13,14 @@
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin xyz="-0.0695 -0.0152 -0.03505" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_1_2.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_1_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0695 -0.0152 -0.03505" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_1_2.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_1_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +55,14 @@
   <visual>
     <origin xyz="-0.0125 -0.02285 -0.02715" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0125 -0.02285 -0.02715" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +76,14 @@
   <visual>
     <origin xyz="-0.00245 -0.01225 0.013" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.00245 -0.01225 0.013" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +97,14 @@
   <visual>
     <origin xyz="-0.00245 -0.01225 0.088" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.00245 -0.01225 0.088" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -118,14 +118,14 @@
   <visual>
     <origin xyz="-0.00245 -0.01225 0.148" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.00245 -0.01225 0.148" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/l_limb_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/l_limb_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -139,14 +139,14 @@
   <visual>
     <origin xyz="-0.102233 -0.0152 -0.03505" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_1_2.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_1_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.102233 -0.0152 -0.03505" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_1_2.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_1_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -160,14 +160,14 @@
   <visual>
     <origin xyz="-0.159233 -0.02285 -0.02715" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.159233 -0.02285 -0.02715" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -181,14 +181,14 @@
   <visual>
     <origin xyz="-0.169283 -0.01225 0.013" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.169283 -0.01225 0.013" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -202,14 +202,14 @@
   <visual>
     <origin xyz="-0.169283 -0.01225 0.088" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.169283 -0.01225 0.088" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -223,14 +223,14 @@
   <visual>
     <origin xyz="-0.169283 -0.01225 0.148" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.169283 -0.01225 0.148" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find BiPedal_description)/meshes/r_limb_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find bipedal_description)/meshes/r_limb_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
