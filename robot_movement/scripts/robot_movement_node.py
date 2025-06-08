@@ -1,20 +1,24 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Joy
+from sensor_msgs.msg import Joy, JointState
 from std_msgs.msg import Int32MultiArray
+from robot_movement.joint_state import JointStateClass
 
-class JoyToArrayNode(Node):
+
+class RobotMovementNode(Node):
     def __init__(self):
         super().__init__('robot_movement_node')
 
         # Initialize variables to store the latest Joy message data
         self.latest_axes = []
 
-        self.subscription = self.create_subscription(
-            Joy,
-            'joy',
-            self.joy_callback,
-            10)
+        self.joint_states_class = JointStateClass()
+
+        #
+        self.subscription = self.create_subscription(Joy, 'joy', self.joy_callback, 10)
+
+        #
+        self.joint_publisher = self.create_publisher(JointState, 'joint_states', 10)
         
         # Publisher for 'int32_array' topic
         self.publisher = self.create_publisher(Int32MultiArray, 'motors_array', 10)
@@ -36,10 +40,19 @@ class JoyToArrayNode(Node):
                             90, 25, 140, 25, 105-10]
 
         self.publisher.publish(int_array_msg)
+        self.join_state_message()
+
+    def join_state_message(self):
+        joint_state = JointState()
+        joint_state.header.stamp = self.get_clock().now().to_msg()
+        joint_state.name = self.joint_states_class.joint_names
+        joint_state.position = self.joint_states_class.update_joint_positions([90,177,40,90,50,
+                                                                                100,15,115,70,110])
+        self.joint_publisher.publish(joint_state)
 
 def main(args=None):
     rclpy.init(args=args)
-    node = JoyToArrayNode()
+    node = RobotMovementNode()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
